@@ -21,5 +21,9 @@ Install using pip method.
 
 Preliminary
 - Make sure all the scripts are in the same folder (punctuate.sh and youtube.sh).
-- 
-- 
+- clean out other MP4 and TXT files in folder
+
+1. CD to directory with scripts
+2. Enter path to you_tube.sh script and enter YouTube URL. Press Enter
+
+
