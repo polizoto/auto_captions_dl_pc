@@ -3,7 +3,7 @@
 # Downloads YouTube captions and cleans them up (makes them a text file and adds punctuation)
 # requires that there are no text files in current working directory
 # depenendcies: youTube-dl, sed, rm, cat
-# Usage: path_to_Download_YouTUbe_MP4+Transcript.sh YouTubeURL
+# Usage: path_to_youtube.sh YouTubeURL
 
 for file in "$@"
 
