@@ -25,6 +25,7 @@ Preliminary
 
 1. CD to directory with scripts
 2. Enter path to youtube.sh script and enter YouTube URL. Press Enter
+
 `./youtube.sh YouTube_URL`
 
 
