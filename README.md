@@ -24,6 +24,7 @@ Preliminary
 - clean out other MP4 and TXT files in folder
 
 1. CD to directory with scripts
-2. Enter path to you_tube.sh script and enter YouTube URL. Press Enter
+2. Enter path to youtube.sh script and enter YouTube URL. Press Enter
+`./youtube.sh YouTube_URL`
 
 
