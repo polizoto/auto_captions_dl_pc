@@ -7,9 +7,9 @@ gnu-utilities
 
 Install git bash for windows: https://git-for-windows.github.io/
 
-aeneas
+aeneas: https://github.com/readbeyond/aeneas/
 
-Use executable available at sillsdev (Daniel Bair): https://github.com/sillsdev/aeneas-installer/releases
+We recommend using the executable installer available at sillsdev (Daniel Bair): https://github.com/sillsdev/aeneas-installer/releases
 
 youtube-dl
 
