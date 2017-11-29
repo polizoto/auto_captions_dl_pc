@@ -23,8 +23,9 @@ Preliminary
 - Make sure all the scripts are in the same folder (punctuate.sh and youtube.sh).
 - clean out other MP4 and TXT files in folder
 
-1. CD to directory with scripts
-2. Enter path to youtube.sh script and enter YouTube URL. Press Enter
+1. Open a Git Bash Terminal 
+2. CD to directory with scripts
+3. Enter path to youtube.sh script and enter YouTube URL. Press Enter
 
 `./youtube.sh YouTube_URL`
 
