@@ -31,4 +31,4 @@ Preliminary
 ## Notes
 
 - These scripts have been designed for use on a PC. For scripts that will work on a Mac, see this repo: https://github.com/polizoto/auto_captions_dl
-
+- For more information, please contact jpolizzotto@htctu.net
