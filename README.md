@@ -28,4 +28,7 @@ Preliminary
 
 `./youtube.sh YouTube_URL`
 
+## Notes
+
+- These scripts have been designed for use on a Mac. For scripts that will work on a PC, see this repo: https://github.com/polizoto/auto_captions_dl
 
