@@ -7,10 +7,6 @@ gnu-utilities
 
 Install git bash for windows: https://git-for-windows.github.io/
 
-aeneas: https://github.com/readbeyond/aeneas/
-
-We recommend using the executable installer available at sillsdev (Daniel Bair): https://github.com/sillsdev/aeneas-installer/releases
-
 youtube-dl
 
 Install using pip method.
@@ -32,4 +28,5 @@ Preliminary
 ## Notes
 
 - These scripts have been designed for use on a PC. For scripts that will work on a Mac, see this repo: https://github.com/polizoto/auto_captions_dl
+- These scripts will work on a single YouTube file only, not a Playlist.
 - For more information, please contact jpolizzotto@htctu.net
