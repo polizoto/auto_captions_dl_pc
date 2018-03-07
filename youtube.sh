@@ -19,67 +19,55 @@ do
 
 # youtube-dl --write-auto-sub --skip-download "$@"
 
-# Step 2
+# Clean Up Text
 
-'C:\Python27\Scripts\aeneas_convert_syncmap.py' *.vtt out.srt
+for f in *.vtt*; do mv "$f" out.srt; done
 
-# Clean Up
-rm *.vtt
+# Delete lines until blank line
+find ./*.srt -type f -exec sed -i '1,/^$/d' {} \;
 
-## Step #3
 # remove angle brackets
+find ./*.srt -type f -exec sed -i 's/<[^<>]*>//g' {} \;
 
-sed -i 's/<[^<>]*>//g' out.srt
+# delete lines beginning with 0
+find ./*.srt -type f -exec sed -i '/^0/ d' {} \;
 
-## Step #4 
-# Remove spaces 
+# remove empty lines
+find ./*.srt -type f -exec sed -i '/^$/d' {} \;
 
-sed -i '/^\s*$/d' out.srt
+# remove extra spaces
+find ./*.srt -type f -exec sed -i 's/[[:space:]]\+/ /g' {} \;
 
-# Step #5
-# Remove all lines that begin with a zero (video must be < 1 hour)
+# remove line breaks
+find ./*.srt -type f -exec sed -i ':a;N;$!ba;s/\n/ /g' {} \;
 
-sed -i '/^0/ d' out.srt
-
-# Step #6 
-# Delete every odd number line
-
-sed -i -n '1~2!p' out.srt
-
-# Step Step #7 
-# Remove line breaks
-
-sed -i ':a;N;$!ba;s/\n/ /g' out.srt
-
-# Step #8
 # Clean up unicode error related to angle brackets
 
-sed -i 's/&gt;/>/g' out.srt
+find ./*.srt -type f -exec sed -i 's/&gt;/>/g' {} \;
 
-# Step #9
 # Uncapitalize each word and then capitalize first word in each sentence (for some foreign language files)
 
 # sed -i 's/\(.*\)/\L\1/' out.txt
 # sed -i 's/\.\s*./\U&\E/g' out.txt
 
-# Step #10 replace CONTENTS section of punctuator with transcript
+# replace CONTENTS section of punctuator with transcript
 
 sed -ri "s@CONTENTS@$(cat out.srt)@g" ./punctuate.sh
 
-# Step #11 Run punctuator
+#  Run punctuator
 
 ./punctuate.sh
 
-# Step # 15 Clean Up Punctuate script (remove transcript data)
+#  Clean Up Punctuate script (remove transcript data)
 
 sed -i 's@"text=.*"@"text=CONTENTS"@g' ./punctuate.sh
 
-# Step # 16 Clean up Transcript
+# Clean up Transcript
 
 sed -i 's/\[,\ Music\ \]/\[\ Music\ \]/g' *.txt
 sed -i 's/\[\ Music,\ \]/\[\ Music\ \]/g' *.txt
 
-# #Step #17 Remove SRT file
+# Remove SRT file
 
 rm out.srt
 
