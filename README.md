@@ -7,7 +7,7 @@ gnu-utilities
 
 Install git bash for windows: https://git-for-windows.github.io/
 
-youtube-dl
+`youtube-dl`
 
 Install using pip method.
 
